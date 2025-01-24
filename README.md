@@ -3,7 +3,7 @@ A rate-based model of adaptation in layer 2/3 of mouse V1
 
 <b>Please note:</b>
 <p>For all data uploades in the Jupyter notebook files to work correctly, please keep pathways and ierarchy of files and folders unchanged.</p>
-<p>Please find requiremets in the <i><b>requirements.txt</b></i> file. '3.11.5 | packaged by Anaconda, Inc. | (main, Sep 11 2023, 13:26:23) [MSC v.1916 64 bit (AMD64)]' Python version was used for development.</p>
+<p>Please find Phython setup requirements in the <i><b>requirements.txt</b></i> file. '3.11.5 | packaged by Anaconda, Inc. | (main, Sep 11 2023, 13:26:23) [MSC v.1916 64 bit (AMD64)]' Python version was used for development.</p>
 <p></p>
 <p><b>Files content:</b></p>
 <ul>
