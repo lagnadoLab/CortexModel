@@ -1,5 +1,32 @@
 # CortexModel
+
+## Overview
 A rate-based model of adaptation in layer 2/3 of mouse V1
+
+## Repo Contents
+
+  - [Naive_opto_tails_prev_FBall_FBnotail_weightScalingTestTest.ipynb](./Naive_opto_tails_prev_FBall_FBnotail_weightScalingTestTest.ipynb) - Naїve model fitting and optogenetic manipulation
+  - [DEP_sigmoid_unfixed_with_heatmap_fixedSM.ipynb](./DEP_sigmoid_unfixed_with_heatmap_fixedSM.ipynb) - Depressors fitting
+  - [NA_init.ipynb](./NA_init.ipynb) - Non-adaptors fitting
+  - [SEN_sigmoid_fixed_weight_scale.ipynb](./SEN_sigmoid_fixed_weight_scale.ipynb) - Sensitizers fitting
+  - [Coin_toss_.ipynb](./Coin_toss_.ipynb) - Simulation of random inhibition connectivity to PCs
+  - [Experimental data](./Experimental_data/Updated_again) - A folder with experimental data used to fit and test the model.
+
+## System Requirements
+
+### Hardware Requirements
+
+
+### OS Requirements
+
+## Installation Guide
+
+## Results
+
+## Citation
+
+For usage of the package and associated manuscript, please cite according to the enclosed (#TODO)
+
 
 <b>Please note:</b>
 <p>To work with this model download and unzip the main folder of this project onto your computer.</p>
