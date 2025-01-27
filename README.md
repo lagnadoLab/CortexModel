@@ -46,8 +46,9 @@ To install the model and work with the Jupyter Notebook files download and unzip
 <p>For working with a new data, provide specific file pathway to data files in data upload section. Data should be one-dimentional .txt file with each timepoint measurment in a new row. <b>Important:</b> timepoint of 0.164745 s wich corresponds to 6.07 Hz framerate recording, was used in our work. All data should be recorded in the same framerate, or timepoint parameter should be changed in all cells that begin with #timepoint comment.</p>
 
 ## Results
-In [Naive_opto_tails_prev_FBall_FBnotail_weightScalingTestTest.ipynb](./Naive_opto_tails_prev_FBall_FBnotail_weightScalingTestTest.ipynb) we fit the data to average traces of four main populations in layer 2/3 of mouse V1. Next in [DEP_sigmoid_unfixed_with_heatmap_fixedSM.ipynb](./DEP_sigmoid_unfixed_with_heatmap_fixedSM.ipynb), [NA_init.ipynb](./NA_init.ipynb), and [SEN_sigmoid_fixed_weight_scale.ipynb](./SEN_sigmoid_fixed_weight_scale.ipynb) we fit depressing, non-adapting, and sensitizing PC cell subpopulations, respectively.
-Finally, in [Coin_toss_.ipynb](./Coin_toss_.ipynb) we perform simulation of random inhibition connectivity to PC cells in layer 2/3 of mouse V1, based on literature, and comparing to results obtained from the model.
+In [Naive_opto_tails_prev_FBall_FBnotail_weightScalingTestTest.ipynb](./Naive_opto_tails_prev_FBall_FBnotail_weightScalingTestTest.ipynb) we fit the data to average traces of four main populations in layer 2/3 of mouse V1 (Figure 5) and tested optogenetic effects (Figure 6).
+Next in [DEP_sigmoid_unfixed_with_heatmap_fixedSM.ipynb](./DEP_sigmoid_unfixed_with_heatmap_fixedSM.ipynb), [NA_init.ipynb](./NA_init.ipynb), and [SEN_sigmoid_fixed_weight_scale.ipynb](./SEN_sigmoid_fixed_weight_scale.ipynb) we fit depressing, non-adapting, and sensitizing PC cell subpopulations, respectively (Figure 7).
+Finally, in [Coin_toss_.ipynb](./Coin_toss_.ipynb) we perform simulation of random inhibition connectivity to PC cells in layer 2/3 of mouse V1, based on literature, and comparing to results obtained from the model (Figure 8).
 ## Citation
 
 For usage of the model and associated manuscript, please cite according to the enclosed [bioRxiv](https://www.biorxiv.org/content/10.1101/2024.12.13.628375v1)
