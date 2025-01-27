@@ -1,7 +1,7 @@
 # CortexModel
 
 ## Overview
-A rate-based model of adaptation in layer 2/3 of mouse V1
+A rate-based model of adaptation in layer 2/3 of mouse V1 described in [bioRxiv](https://www.biorxiv.org/content/10.1101/2024.12.13.628375v1) manuscript.
 
 ## Repo Contents
 
@@ -50,6 +50,6 @@ In [Naive_opto_tails_prev_FBall_FBnotail_weightScalingTestTest.ipynb](./Naive_op
 Finally, in [Coin_toss_.ipynb](./Coin_toss_.ipynb) we perform simulation of random inhibition connectivity to PC cells in layer 2/3 of mouse V1, based on literature, and comparing to results obtained from the model.
 ## Citation
 
-For usage of the package and associated manuscript, please cite according to the enclosed (#TODO)
+For usage of the model and associated manuscript, please cite according to the enclosed [bioRxiv](https://www.biorxiv.org/content/10.1101/2024.12.13.628375v1)
 
 
