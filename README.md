@@ -24,7 +24,23 @@ The model designed and tested under the Windows operating systems. Test under Li
 
 ## Installation Guide
 The model is developed using Python 3.11.5 | packaged by Anaconda, Inc. 
-The full virtual environment requirements are in [requirements.txt](./requirements.txt)
+The full virtual environment requirements are in [requirements.txt](./requirements.txt).
+The main dependencies that should be installed/updated are:
+```
+ipykernel==6.28.0
+ipython==8.25.0
+ipywidgets==8.1.3
+lmfit==1.3.2
+matplotlib==3.9.1.post1
+matplotlib-inline==0.1.6
+numdifftools==0.9.41
+numpy==2.0.1
+pandas==2.2.2
+scikit-learn==1.5.1
+scipy==1.14.0
+seaborn==0.13.2
+
+```
 ## Results
 
 ## Citation
