@@ -23,7 +23,8 @@ Runtime dependent on the number of function runs ("max_nfev" parameter) in each 
 The model designed and tested under the Windows operating systems. Test under Linux and Mac OS are needed to be done.
 
 ## Installation Guide
-
+The model is developed using Python 3.11.5 | packaged by Anaconda, Inc. 
+The full virtual environment requirements are in [requirements.txt](./requirements.txt)
 ## Results
 
 ## Citation
