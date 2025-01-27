@@ -20,6 +20,7 @@ This model requires only a standard computer with enough CPU performance.
 The runtime of one run is around 1.5 - 2 hours are generated using a computer with the next specs: (16 GB RAM, 13th Gen Intel(R) Core(TM) i7-1360P   2.20 GHz).
 Runtime dependent on the number of function runs ("max_nfev" parameter) in each fitting algorythm.
 ### OS Requirements
+The model designed and tested under the Windows operating systems. Test under Linux and Mac OS are needed to be done.
 
 ## Installation Guide
 
