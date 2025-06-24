@@ -1,5 +1,7 @@
 # CortexModel(Updating currently)
 
+# Readme and Subpopulatuion part is currently under update due to new paper submission. Should be finished by the end of 25/06/2025
+
 ## Overview
 A rate-based model of adaptation in layer 2/3 of mouse V1 described in [bioRxiv](https://www.biorxiv.org/content/10.1101/2024.12.13.628375v1) manuscript.
 
