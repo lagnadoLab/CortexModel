@@ -1,4 +1,4 @@
-# CortexModel
+# CortexModel(Updating currently)
 
 ## Overview
 A rate-based model of adaptation in layer 2/3 of mouse V1 described in [bioRxiv](https://www.biorxiv.org/content/10.1101/2024.12.13.628375v1) manuscript.
