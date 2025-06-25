@@ -1,4 +1,4 @@
-# CortexModel(Updating currently)
+# CortexModel
 
 ## Overview
 <b>Important:</b> This wor is based on the model idea that is described in the following BioRxive. But, extended for studying of how internal behavioral state interact with stimulus adaptation. After the final version being published, the reference link will be Updated.
