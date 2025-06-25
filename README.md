@@ -1,7 +1,7 @@
 # CortexModel
 
 ## Overview
-<b>Important:</b> This wor is based on the model idea that is described in the following BioRxive. But, extended for studying of how internal behavioral state interact with stimulus adaptation. After the final version being published, the reference link will be Updated.
+<b>Important:</b> This work is based on the model idea that is described in the following BioRxive. But, extended for studying of how internal behavioral state interact with stimulus adaptation. After the final version being published, the reference link will be Updated.
 
 A rate-based model of adaptation in layer 2/3 of mouse V1 described in [bioRxiv](https://www.biorxiv.org/content/10.1101/2024.12.13.628375v1) manuscript.
 
@@ -58,7 +58,7 @@ In [S1_hab_loco_7_2.ipynb](./S1_hab_loco_7_2.ipynb) and [S1_Hab_NoLoco_9_1.ipynb
 Next in [C_S1_hab_Dep_NoLoco_1_paper.ipynb](./C_S1_hab_Dep_NoLoco_1_paper.ipynb), [C_S1_hab_NA_NoLoco_1_paper.ipynb](./C_S1_hab_NA_NoLoco_1_paper.ipynb), and [C_S1_hab_SEN_NoLoco_1_paper.ipynb](./C_S1_hab_SEN_NoLoco_1_paper.ipynb) we fit depressing, non-adapting, and sensitizing PC cell subpopulations for resting state and similarly in [C_S1_hab_Dep_loco_1_paper.ipynb](./C_S1_hab_Dep_loco_1_paper.ipynb), [C_S1_hab_NA_loco_1_WeightTest_paper.ipynb](./C_S1_hab_NA_loco_1_WeightTest_paper.ipynb), and [C_S1_hab_SEN_loco_1_2_paper.ipynb](./C_S1_hab_SEN_loco_1_2_paper.ipynb) - for locomoting state (Figure 7 for BioRxiv NEEDS UPDATE FOR PAPER AFTER REVIEW).
 
 ## Citation
-<b>Important:</b> This wor is based on the model idea that is described in the following BioRxive. But, extended for studying of how internal behavioral state interact with stimulus adaptation. After the final version being published, the reference link will be Updated.
+<b>Important:</b> This work is based on the model idea that is described in the following BioRxive. But, extended for studying of how internal behavioral state interact with stimulus adaptation. After the final version being published, the reference link will be Updated.
 
 For usage of the model and associated manuscript, please cite according to the enclosed [bioRxiv](https://www.biorxiv.org/content/10.1101/2024.12.13.628375v1)
 
