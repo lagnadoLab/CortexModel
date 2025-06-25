@@ -1,8 +1,8 @@
 # CortexModel(Updating currently)
 
-# Readme and Subpopulatuion part is currently under update due to new paper submission. Should be finished by the end of 25/06/2025
-
 ## Overview
+<b>Important:</b> This wor is based on the model idea that is described in the following BioRxive. But, extended for studying of how internal behavioral state interact with stimulus adaptation. After the final version being published, the reference link will be Updated.
+
 A rate-based model of adaptation in layer 2/3 of mouse V1 described in [bioRxiv](https://www.biorxiv.org/content/10.1101/2024.12.13.628375v1) manuscript.
 
 ## Repo Contents
@@ -54,10 +54,11 @@ To install the model and work with the Jupyter Notebook files download and unzip
 <p>For working with a new data, provide specific file pathway to data files in data upload section. Data should be one-dimentional .txt file with each timepoint measurment in a new row. <b>Important:</b> timepoint of 0.164745 s wich corresponds to 6.07 Hz framerate recording, was used in our work. All data should be recorded in the same framerate, or timepoint parameter, where it is iniciated should be changed.</p>
 
 ## Results
-In [Naive_opto_tails_prev_FBall_FBnotail_weightScalingTestTest.ipynb](./Naive_opto_tails_prev_FBall_FBnotail_weightScalingTestTest.ipynb) we fit the data to average traces of four main populations in layer 2/3 of mouse V1 (Figure 5) and tested optogenetic effects (Figure 6).
-Next in [DEP_sigmoid_unfixed_with_heatmap_fixedSM.ipynb](./DEP_sigmoid_unfixed_with_heatmap_fixedSM.ipynb), [NA_init.ipynb](./NA_init.ipynb), and [SEN_sigmoid_fixed_weight_scale.ipynb](./SEN_sigmoid_fixed_weight_scale.ipynb) we fit depressing, non-adapting, and sensitizing PC cell subpopulations, respectively (Figure 7).
-Finally, in [Coin_toss_.ipynb](./Coin_toss_.ipynb) we perform simulation of random inhibition connectivity to PC cells in layer 2/3 of mouse V1, based on literature, and comparing to results obtained from the model (Figure 8).
+In [S1_hab_loco_7_2.ipynb](./S1_hab_loco_7_2.ipynb) and [S1_Hab_NoLoco_9_1.ipynb](./S1_Hab_NoLoco_9_1.ipynb) we fit the data to average traces of four main populations in layer 2/3 of mouse V1 (Figure 5 for BioRxiv NEEDS UPDATE FOR PAPER AFTER REVIEW) and tested optogenetic effects (Figure 6 for BioRxiv NEEDS UPDATE FOR PAPER AFTER REVIEW) for two behavioural states: locomotion and rest.
+Next in [C_S1_hab_Dep_NoLoco_1_paper.ipynb](./C_S1_hab_Dep_NoLoco_1_paper.ipynb), [C_S1_hab_NA_NoLoco_1_paper.ipynb](./C_S1_hab_NA_NoLoco_1_paper.ipynb), and [C_S1_hab_SEN_NoLoco_1_paper.ipynb](./C_S1_hab_SEN_NoLoco_1_paper.ipynb) we fit depressing, non-adapting, and sensitizing PC cell subpopulations for resting state and similarly in [C_S1_hab_Dep_loco_1_paper.ipynb](./C_S1_hab_Dep_loco_1_paper.ipynb), [C_S1_hab_NA_loco_1_WeightTest_paper.ipynb](./C_S1_hab_NA_loco_1_WeightTest_paper.ipynb), and [C_S1_hab_SEN_loco_1_2_paper.ipynb](./C_S1_hab_SEN_loco_1_2_paper.ipynb) - for locomoting state (Figure 7 for BioRxiv NEEDS UPDATE FOR PAPER AFTER REVIEW).
+
 ## Citation
+<b>Important:</b> This wor is based on the model idea that is described in the following BioRxive. But, extended for studying of how internal behavioral state interact with stimulus adaptation. After the final version being published, the reference link will be Updated.
 
 For usage of the model and associated manuscript, please cite according to the enclosed [bioRxiv](https://www.biorxiv.org/content/10.1101/2024.12.13.628375v1)
 
