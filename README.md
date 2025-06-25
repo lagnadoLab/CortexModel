@@ -14,9 +14,9 @@ A rate-based model of adaptation in layer 2/3 of mouse V1 described in [bioRxiv]
   - [C_S1_hab_NA_NoLoco_1_paper.ipynb](./C_S1_hab_NA_NoLoco_1_paper.ipynb) - Non-adaptors fitting (Rest)
   - [C_S1_hab_SEN_NoLoco_1_paper.ipynb](./C_S1_hab_SEN_NoLoco_1_paper.ipynb) - Sensitizers fitting (Rest)
     
-  - [C_S1_hab_Dep_NoLoco_1_paper.ipynb](./C_S1_hab_Dep_NoLoco_1_paper.ipynb) - Depressors fitting (Locomotion)
-  - [C_S1_hab_NA_NoLoco_1_paper.ipynb](./C_S1_hab_NA_NoLoco_1_paper.ipynb) - Non-adaptors fitting (Locomotion)
-  - [C_S1_hab_SEN_NoLoco_1_paper.ipynb](./C_S1_hab_SEN_NoLoco_1_paper.ipynb) - Sensitizers fitting (Locomotion)
+  - [C_S1_hab_Dep_loco_1_paper.ipynb](./C_S1_hab_Dep_loco_1_paper.ipynb) - Depressors fitting (Locomotion)
+  - [C_S1_hab_NA_loco_1_WeightTest_paper.ipynb](./C_S1_hab_NA_loco_1_WeightTest_paper.ipynb) - Non-adaptors fitting (Locomotion)
+  - [C_S1_hab_SEN_loco_1_2_paper.ipynb](./C_S1_hab_SEN_loco_1_2_paper.ipynb) - Sensitizers fitting (Locomotion)
     
   - [Experimental data](./Experimental_data/Updated_again) - A folder with experimental data used to fit and test the model.
 
