@@ -6,8 +6,9 @@ A rate-based model of adaptation and behavioural state dependency in layer 2/3 o
 
 ## Repo Contents
 
-  - [S1_hab_loco_7_2.ipynb](./S1_hab_loco_7_2.ipynb) - The model fitting average traces and performing optogenetic manipulation on the dataset of locomoting mice.
-  - [S1_Hab_NoLoco_9_1.ipynb](./S1_Hab_NoLoco_9_1.ipynb) - The model fitting average traces and performing optogenetic manipulation on the dataset of resting mice.
+  - [Model_V1_Rest.ipynb](./Model_V1_Rest.ipynb) - The model fitting average traces on the dataset of resting mice.
+  
+  - [Model_V1_Loco.ipynb](./Model_V1_Loco.ipynb) - The model fitting average traces and performing optogenetic manipulation on the dataset of locomoting mice.
     
   - [C_S1_hab_Dep_NoLoco_1_paper.ipynb](./C_S1_hab_Dep_NoLoco_1_paper.ipynb) - Depressors fitting (Rest)
   - [C_S1_hab_NA_NoLoco_1_paper.ipynb](./C_S1_hab_NA_NoLoco_1_paper.ipynb) - Non-adaptors fitting (Rest)
