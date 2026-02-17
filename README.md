@@ -10,15 +10,15 @@ A rate-based model of adaptation and behavioural state dependency in layer 2/3 o
   
   - [Model_V1_Loco.ipynb](./Model_V1_Loco.ipynb) - The model fitting average traces and performing optogenetic manipulation on the dataset of locomoting mice.
     
-  - [C_S1_hab_Dep_NoLoco_1_paper.ipynb](./C_S1_hab_Dep_NoLoco_1_paper.ipynb) - Depressors fitting (Rest)
-  - [C_S1_hab_NA_NoLoco_1_paper.ipynb](./C_S1_hab_NA_NoLoco_1_paper.ipynb) - Non-adaptors fitting (Rest)
-  - [C_S1_hab_SEN_NoLoco_1_paper.ipynb](./C_S1_hab_SEN_NoLoco_1_paper.ipynb) - Sensitizers fitting (Rest)
+  - [Model_V1_Rest_PCTypes_Dep.ipynb](./Model_V1_Rest_PCTypes_Dep.ipynb) - Depressors fitting (Rest)
+  - [Model_V1_Rest_PCTypes_Int.ipynb](./Model_V1_Rest_PCTypes_Int.ipynb) - Intermediates fitting (Rest)
+  - [Model_V1_Rest_PCTypes_Sen.ipynb](./Model_V1_Rest_PCTypes_Sen.ipynb) - Sensitizers fitting (Rest)
     
-  - [C_S1_hab_Dep_loco_1_paper.ipynb](./C_S1_hab_Dep_loco_1_paper.ipynb) - Depressors fitting (Locomotion)
-  - [C_S1_hab_NA_loco_1_WeightTest_paper.ipynb](./C_S1_hab_NA_loco_1_WeightTest_paper.ipynb) - Non-adaptors fitting (Locomotion)
-  - [C_S1_hab_SEN_loco_1_2_paper.ipynb](./C_S1_hab_SEN_loco_1_2_paper.ipynb) - Sensitizers fitting (Locomotion)
+  - [Model_V1_Loco_PCTypes_Dep.ipynb](./Model_V1_Loco_PCTypes_Dep.ipynb) - Depressors fitting (Locomotion)
+  - [Model_V1_Loco_PCTypes_Int.ipynb](./Model_V1_Loco_PCTypes_Int.ipynb) - Intermediates fitting (Locomotion)
+  - [Model_V1_Loco_PCTypes_Sen.ipynb](./Model_V1_Loco_PCTypes_Sen.ipynb) - Sensitizers fitting (Locomotion)
     
-  - [Experimental data](./Experimental_data/Updated_again) - A folder with experimental data used to fit and test the model.
+  - [Experimental data](./Experimental_data) - A folder with experimental data used to fit and test the model.
 
 ## System Requirements
 
@@ -54,8 +54,8 @@ To install the model and work with the Jupyter Notebook files download and unzip
 <p>For working with a new data, provide specific file pathway to data files in data upload section. Data should be one-dimentional .txt file with each timepoint measurment in a new row. <b>Important:</b> timepoint of 0.164745 s wich corresponds to 6.07 Hz framerate recording, was used in our work. All data should be recorded in the same framerate, or timepoint parameter, where it is iniciated should be changed.</p>
 
 ## Results
-In [S1_hab_loco_7_2.ipynb](./S1_hab_loco_7_2.ipynb) and [S1_Hab_NoLoco_9_1.ipynb](./S1_Hab_NoLoco_9_1.ipynb) we fit the data to average traces of four main populations in layer 2/3 of mouse V1 (Figure 6) and fine tuned with optogenetic effects (Figure 5) for two behavioural states: locomotion and rest.
-Next in [C_S1_hab_Dep_NoLoco_1_paper.ipynb](./C_S1_hab_Dep_NoLoco_1_paper.ipynb), [C_S1_hab_NA_NoLoco_1_paper.ipynb](./C_S1_hab_NA_NoLoco_1_paper.ipynb), and [C_S1_hab_SEN_NoLoco_1_paper.ipynb](./C_S1_hab_SEN_NoLoco_1_paper.ipynb) we fit depressing, non-adapting, and sensitizing PC cell subpopulations for resting state and similarly in [C_S1_hab_Dep_loco_1_paper.ipynb](./C_S1_hab_Dep_loco_1_paper.ipynb), [C_S1_hab_NA_loco_1_WeightTest_paper.ipynb](./C_S1_hab_NA_loco_1_WeightTest_paper.ipynb), and [C_S1_hab_SEN_loco_1_2_paper.ipynb](./C_S1_hab_SEN_loco_1_2_paper.ipynb) - for locomoting state (Figure 7).
+In [Model_V1_Rest.ipynb](./Model_V1_Rest.ipynb) and [Model_V1_Loco.ipynb](./Model_V1_Loco.ipynb) we fit the data to average traces of four main populations in layer 2/3 of mouse V1 (Figure 6) and fine tuned with optogenetic effects (Figure 5) for two behavioural states:rest and locomotion.
+Next in [Model_V1_Rest_PCTypes_Dep.ipynb](./Model_V1_Rest_PCTypes_Dep.ipynb), [Model_V1_Rest_PCTypes_Int.ipynb](./Model_V1_Rest_PCTypes_Int.ipynb), and [Model_V1_Rest_PCTypes_Sen.ipynb](./Model_V1_Rest_PCTypes_Sen.ipynb) we fit depressing, intermediate, and sensitizing PC cell subpopulations for resting state and similarly in [Model_V1_Loco_PCTypes_Dep.ipynb](./Model_V1_Loco_PCTypes_Dep.ipynb), [Model_V1_Loco_PCTypes_Int.ipynb](./Model_V1_Loco_PCTypes_Int.ipynb), and [Model_V1_Loco_PCTypes_Sen.ipynb](./Model_V1_Loco_PCTypes_Sen.ipynb) - for locomoting state (Figure 7).
 
 ## Citation
 
