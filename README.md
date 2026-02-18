@@ -2,36 +2,48 @@
 
 ## Overview
 
-A rate-based model of adaptation and behavioural state dependency in layer 2/3 of mouse V1 described in <b><i>[reference placeholder]</i></b> manuscript.
+A rate-based model of adaptation and behavioural state dependency in layer 2/3 of mouse V1 described in [Hinojosa, Kosiachkin *et al.* 2025](https://www.biorxiv.org/content/10.1101/2025.07.24.666602v2). This repository accompanies the manuscript and provides both a reference implementation of the model and the parameter optimization pipeline used in the study.
 
 ## Repo Contents
+This repository is organized into two complementary components:
+- The **model implementation**, used in the Jupyter notebooks at the root level, which illustrates how specific parameter choices determine neural responses and their dynamics.
+- The **fitting pipeline**, located in the `Fitting/` directory, which was used to identify the parameter sets that reproduce experimental data accurately.
 
-  - [Model_V1_Rest.ipynb](./Model_V1_Rest.ipynb) - The model fitting average traces on the dataset of resting mice.
+### Model implementation (Jupyter Notebooks)
   
-  - [Model_V1_Loco.ipynb](./Model_V1_Loco.ipynb) - The model fitting average traces and performing optogenetic manipulation on the dataset of locomoting mice.
+  - [Model_V1_Rest.ipynb](./Model_V1_Rest.ipynb) - Model simulation using fitted connection weights to reproduce average traces on the dataset of resting mice.
+  
+  - [Model_V1_Loco.ipynb](./Model_V1_Loco.ipynb) - Model simulation using fitted connection weights to reproduce average traces on the dataset of locomoting mice.
     
-  - [Model_V1_Rest_PCTypes_Dep.ipynb](./Model_V1_Rest_PCTypes_Dep.ipynb) - Depressors fitting (Rest)
-  - [Model_V1_Rest_PCTypes_Int.ipynb](./Model_V1_Rest_PCTypes_Int.ipynb) - Intermediates fitting (Rest)
-  - [Model_V1_Rest_PCTypes_Sen.ipynb](./Model_V1_Rest_PCTypes_Sen.ipynb) - Sensitizers fitting (Rest)
+  - [Model_V1_Rest_PCTypes_Dep.ipynb](./Model_V1_Rest_PCTypes_Dep.ipynb) - Model simulation for depressing PC subtype (Rest).
+  - [Model_V1_Rest_PCTypes_Int.ipynb](./Model_V1_Rest_PCTypes_Int.ipynb) - Model simulation for intermediate PC subtype (Rest)
+  - [Model_V1_Rest_PCTypes_Sen.ipynb](./Model_V1_Rest_PCTypes_Sen.ipynb) - Model simulation for sensitizing PC subtype (Rest)
     
-  - [Model_V1_Loco_PCTypes_Dep.ipynb](./Model_V1_Loco_PCTypes_Dep.ipynb) - Depressors fitting (Locomotion)
-  - [Model_V1_Loco_PCTypes_Int.ipynb](./Model_V1_Loco_PCTypes_Int.ipynb) - Intermediates fitting (Locomotion)
-  - [Model_V1_Loco_PCTypes_Sen.ipynb](./Model_V1_Loco_PCTypes_Sen.ipynb) - Sensitizers fitting (Locomotion)
+  - [Model_V1_Loco_PCTypes_Dep.ipynb](./Model_V1_Loco_PCTypes_Dep.ipynb) - Model simulation for depressing PC subtype (Locomotion)
+  - [Model_V1_Loco_PCTypes_Int.ipynb](./Model_V1_Loco_PCTypes_Int.ipynb) - Model simulation for intermediate PC subtype (Locomotion)
+  - [Model_V1_Loco_PCTypes_Sen.ipynb](./Model_V1_Loco_PCTypes_Sen.ipynb) - Model simulation for sensitizing PC subtype (Locomotion)
     
-  - [Experimental data](./Experimental_data) - A folder with experimental data used to fit and test the model.
+  - [Experimental data](./Experimental_data) - Experimental data used for both model implementation and fitting.
+
+### Fitting Pipeline
+
+  - [Fitting](./Fitting) - directory containing the optimization pipeline used to identify parameter sets that reproduce the experimental data with high-performance computing (Artemis).
 
 ## System Requirements
 
 ### Hardware Requirements
-This model requires only a standard computer with enough CPU performance. 
+**Model implementation** requires only a standard computer with enough CPU performance. 
 
-The runtime of one run is around 1.5 - 2 hours are generated using a computer with the next specs: (16 GB RAM, 13th Gen Intel(R) Core(TM) i7-1360P   2.20 GHz).
-Runtime dependent on the number of function runs ("max_nfev" parameter) in each fitting algorythm.
+The runtime of a single simulation is few seconds on a standard desktop computer (16 GB RAM, 13th Gen Intel(R) Core(TM) i7-1360P 2.20 GHz).
+
+The **fitting pipeline** was executed on the Artemis high-performance computing cluster. Runtime depends on the number of function evaluations (max_nfev), the number of initial conditions used in the optimization, and the number of CPU cores allocated. See the Fitting/ README for details.
+
 ### OS Requirements
-The model designed and tested under the Windows operating systems. Test under Linux and Mac OS are needed to be done.
+
+The model was designed and tested under the Windows operating system.
 
 ## Installation Guide
-The model is developed using Python 3.11.5 | packaged by Anaconda, Inc. 
+The model was developed using Python 3.11.5 | packaged by Anaconda, Inc. 
 The full virtual environment requirements are in [requirements.txt](./requirements.txt).
 The main dependencies that should be installed/updated are:
 ```
@@ -49,16 +61,19 @@ scipy==1.14.0
 seaborn==0.13.2
 ```
 
-To install the model and work with the Jupyter Notebook files download and unzip the main folder of this GitHub folder.
-<p><b>Important:</b> For all data uploades in the Jupyter notebook files to work correctly, please keep pathways and hierarchy of files and folders unchanged.</p>
-<p>For working with a new data, provide specific file pathway to data files in data upload section. Data should be one-dimentional .txt file with each timepoint measurment in a new row. <b>Important:</b> timepoint of 0.164745 s wich corresponds to 6.07 Hz framerate recording, was used in our work. All data should be recorded in the same framerate, or timepoint parameter, where it is iniciated should be changed.</p>
+To install the **model implementation** and work with the Jupyter Notebook files download and unzip the main folder of this GitHub folder.
+<p><b>Important:</b> For all data uploads in the Jupyter notebook files to work correctly, please keep pathways and hierarchy of files and folders unchanged.</p>
+<p>For working with a new data, provide specific file pathway to data files in data upload section. Data should be one-dimensional .txt file with a timepoint per row. **Important:** timepoint of 0.164745 s, which corresponds to 6.07 Hz framerate recording, was used in our work. Please change the timepoint accordingly to your framerate.</p>
+
+For instructions on how to run the **fitting pipeline** using Artemis, check the Readme file in the /Fitting directory.
 
 ## Results
-In [Model_V1_Rest.ipynb](./Model_V1_Rest.ipynb) and [Model_V1_Loco.ipynb](./Model_V1_Loco.ipynb) we fit the data to average traces of four main populations in layer 2/3 of mouse V1 (Figure 6) and fine tuned with optogenetic effects (Figure 5) for two behavioural states:rest and locomotion.
+In [Model_V1_Rest.ipynb](./Model_V1_Rest.ipynb) and [Model_V1_Loco.ipynb](./Model_V1_Loco.ipynb) we fit the data to average traces of four main populations in layer 2/3 of mouse V1 (Figure 6) and fine-tuned with optogenetic effects (Figure 5) for two behavioural states: rest and locomotion.
+
 Next in [Model_V1_Rest_PCTypes_Dep.ipynb](./Model_V1_Rest_PCTypes_Dep.ipynb), [Model_V1_Rest_PCTypes_Int.ipynb](./Model_V1_Rest_PCTypes_Int.ipynb), and [Model_V1_Rest_PCTypes_Sen.ipynb](./Model_V1_Rest_PCTypes_Sen.ipynb) we fit depressing, intermediate, and sensitizing PC cell subpopulations for resting state and similarly in [Model_V1_Loco_PCTypes_Dep.ipynb](./Model_V1_Loco_PCTypes_Dep.ipynb), [Model_V1_Loco_PCTypes_Int.ipynb](./Model_V1_Loco_PCTypes_Int.ipynb), and [Model_V1_Loco_PCTypes_Sen.ipynb](./Model_V1_Loco_PCTypes_Sen.ipynb) - for locomoting state (Figure 7).
 
 ## Citation
 
-For usage of the model and associated manuscript, please cite according to the enclosed <b><i>[reference placeholder]</i></b>
+For usage of the model and associated manuscript, please cite according to the enclosed [Hinojosa, Kosiachkin *et al.* 2025](https://www.biorxiv.org/content/10.1101/2025.07.24.666602v2)
 
 
