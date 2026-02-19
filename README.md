@@ -25,6 +25,8 @@ This repository is organized into two complementary components:
     
   - [Experimental data](./Experimental_data) - Experimental data used for both model implementation and fitting.
 
+The notebooks run deterministic simulations using previously fitted parameters. They do not perform optimization.
+
 ### Fitting Pipeline
 
   - [Fitting](./Fitting) - directory containing the optimization pipeline used to identify parameter sets that reproduce the experimental data with high-performance computing (Artemis).
@@ -61,9 +63,9 @@ scipy==1.14.0
 seaborn==0.13.2
 ```
 
-To install the **model implementation** and work with the Jupyter Notebook files download and unzip the main folder of this GitHub folder.
+To install the **model implementation** and work with the Jupyter Notebook files download and unzip the main folder of this GitHub repository.
 <p><b>Important:</b> For all data uploads in the Jupyter notebook files to work correctly, please keep pathways and hierarchy of files and folders unchanged.</p>
-<p>For working with a new data, provide specific file pathway to data files in data upload section. Data should be one-dimensional .txt file with a timepoint per row. **Important:** timepoint of 0.164745 s, which corresponds to 6.07 Hz framerate recording, was used in our work. Please change the timepoint accordingly to your framerate.</p>
+<p>For working with different datasets, provide specific file pathway to data files in data upload section. Data should be a one-dimensional .txt file with one data point per row. **Important:** a frame interval of 0.164745 s (correspoding to a 6.07 Hz acquisition rate) was used in our work. Please adjust the frame interval according to your recording framerate.</p>
 
 For instructions on how to run the **fitting pipeline** using Artemis, check the Readme file in the /Fitting directory.
 
