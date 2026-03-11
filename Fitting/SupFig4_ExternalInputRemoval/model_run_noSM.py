@@ -8,36 +8,41 @@ import random
 from scipy.integrate import odeint, solve_ivp
 from lmfit import minimize, Parameter, Parameters, report_fit
 from model_functions import *
+from pathlib import Path
 
 ########## DATA LOAD ##########################################################
 
 # timepoint
 dt = 0.164745
 
+#Data Directories
+REPO_ROOT = Path(__file__).resolve().parents[2]
+DATA_DIR = REPO_ROOT / "Experimental data"
+
 # PC_average (whole population)
-pc_all = np.loadtxt(r'QA_Nor_PC_All_AvgSess1.txt')
+pc_all = np.loadtxt(DATA_DIR/'QA_Nor_PC_All_AvgSess1.txt')
 # PC_average_standard_error
-pc_all_err = np.loadtxt(r'QA_Nor_PC_All_SEMSess1.txt')
+pc_all_err = np.loadtxt(DATA_DIR/'QA_Nor_PC_All_SEMSess1.txt')
 
 # Experimental time calculation
 t_exp_1 = exp_time(start=0.0, step=dt, count=len(pc_all))
 
 # PV_average (whole population)
-pv = np.loadtxt(r'QA_Nor_PV_AvgSess.txt')
+pv = np.loadtxt(DATA_DIR/'QA_Nor_PV_AvgSess.txt')
 # PV_average_standard_error
-pv_err = np.loadtxt(r'QA_Nor_PV_SEMSess.txt')
+pv_err = np.loadtxt(DATA_DIR/'QA_Nor_PV_SEMSess.txt')
 
 # SST_average (whole population)
-sst = np.loadtxt(r'QA_Nor_SST_AvgSess.txt')
+sst = np.loadtxt(DATA_DIR/'QA_Nor_SST_AvgSess.txt')
 # SST_average_standard_error
-sst_err = np.loadtxt(r'QA_Nor_SST_SEMSess.txt')
+sst_err = np.loadtxt(DATA_DIR/'QA_Nor_SST_SEMSess.txt')
 
 # VIP_average (whole population)
-vip = np.loadtxt(r'QA_Nor_VIP_AvgSess.txt')
+vip = np.loadtxt(DATA_DIR/'QA_Nor_VIP_AvgSess.txt')
 # VIP_average_standard_error
-vip_err = np.loadtxt(r'QA_Nor_VIP_SEMSess.txt')
+vip_err = np.loadtxt(DATA_DIR/'QA_Nor_VIP_SEMSess.txt')
 
-input_file = "sobol_samples_500000.csv"
+input_file = "sobol_samples.csv"
 
 if os.path.exists(input_file):
     df_existing = pd.read_csv(input_file)
