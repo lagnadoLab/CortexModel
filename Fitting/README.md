@@ -3,7 +3,7 @@
 ## Overview
 This pipeline reproduces the parameter fitting and optogenetic validation described in [Hinojosa, Kosiachkin *et al.* 2025](https://www.biorxiv.org/content/10.1101/2025.07.24.666602v2). Parameter sweeps were executed in parallel on a SLURM-based high-performance computing (HPC) cluster.
 
-To install the **model fitting** and work with the python files download and unzip the desired folder. Copy these folders in your HPC server to run fittings using bash language and python.
+To install the **model fitting** and work with the python files download and unzip all the folders including Fitting and Experimental data. Copy these folders in your HPC server to run fittings using bash language and python.
 <p><b>Important:</b> For all scripts to work correctly, please keep pathways, hierarchy of files and folders unchanged.</p>
 
 The workflow consists of:
@@ -33,7 +33,7 @@ python -m venv myenv
 source myenv/bin/activate
 pip install -r requirements.txt
 
-The main dependencies that should be installed/updated are:
+The main dependencies that should be installed/updated and the version we used are:
 ```
 ipykernel==6.28.0
 ipython==8.25.0
@@ -55,7 +55,7 @@ Initial conditions homogenously distributed across parameter space were used to 
 
 ## 1.1. Parameter Sampling (Sobol)
 
-**Description**: Generates quasi-random Sobol initial parameter sampling homogenously the parameter space to fit neuronal responses.
+**Description**: Generates quasi-random Sobol initial parameter sampling homogenously across the parameter space to fit neuronal responses.
 
 **Script**: Sobol_test.py
 
@@ -63,11 +63,11 @@ Initial conditions homogenously distributed across parameter space were used to 
 
 ## 1.2. Cluster Execution (SLURM)
 
-**Description**: this is the core model execution where the equation solutions are fitted to neuronal responses, starting from the initial conditions in sobol_sample.csv and allocating each solution to individual cores using SLURM.
+**Description:** This step runs the core model fitting. The equations are fitted to neuronal responses starting from the initial conditions provided in `sobol_sample.csv`. Each parameter set is evaluated in parallel by distributing jobs across multiple cores using SLURM.
 
 **Submit**: sbatch **submit_ID_sweep.sh**. This will initiate **model_run.py** which will use **model_functions.py**.
 
-**Outputs**: Per-solution CSV result files and Log files (terminal output including errors)
+**Outputs**: Per-solution CSV result files and Log files (terminal output and errors)
 
 These scripts were executed on the University of Sussex Artemis HPC cluster using SLURM, but can be adapted to any SLURM-based system.
 
@@ -75,9 +75,9 @@ These scripts were executed on the University of Sussex Artemis HPC cluster usin
 
 **Description**: combine parameters from all solutions into one only csv file and select those solutions with chi-square below threshold. Rest threshold = 3, Locomotion threshold = 10.
 
-**Script**: combine_results.py
+**Script**: combine_results.py --condition rest or locomotion
 
-**Output**: good_fits.csv
+**Output**: good_fits_condition.csv
 
 ## 2. Local refinement
 
@@ -85,27 +85,27 @@ These scripts were executed on the University of Sussex Artemis HPC cluster usin
 
 **Scripts**: Sobol_test_local.py, submit_ID_sweep.sh, combine_result.py.
 
-**Output**: good_fits_local.csv
+**Output**: good_fits_condition.csv
 
 ## 3. Optogenetic Validation
 
 **Description**: test of good solutions with optogenetic modulation of inhibitory interneurons. The model was required to fit the activity of PCs when activating and silencing PVs and SST interneurons(Figure 4).
 
-**Scripts**: sbatch **submit_opto.sh** that will initiate **Opto_run_loco.py** for each solution. Followed by combine_results_opto.py that will combine all fits and filter the good ones.
+**Scripts**: sbatch **submit_opto.sh**. This will initiate **Opto_run_loco.py** for each solution. Finally, combine_results_opto.py will combine all fits and filter the good ones.
 
 **Output**: good_fits_opto.csv
 
 ## 5. Adaptation direction
-**Description**: the model was constrained to fit the activity of PC supopulations with different adaptive properties: sensitizers, intermediate and depressors(Figure 6).
+**Description**: the model was constrained to fit the activity of PC supopulations with different adaptive properties: sensitizers, intermediates and depressors(Figure 6).
 
-**Scripts**: sbatch **submit_ID_DepSen.sh** that will initiate **Model_run_DepSen.py** for each solution. Followed by combine_results_DepSen.py that will combine all fits and filter the good ones.
+**Scripts**: sbatch **submit_ID_DepSen.sh** that will initiate **Model_run_DepSen.py** for each solution. Finally, combine_results_DepSen.py will combine all fits and filter the good ones.
 
-**Output**: good_fits_Sen.csv, good_fits_NA.csv, good_fits_Dep.csv
+**Output**: good_fits_sensitizers.csv, good_fits_intermediates.csv, good_fits_depressors.csv
 
 
 ## 5. Post-hoc Parameter Structure Analysis
 
-**Description**: Finally, good solutions were averaged and their structure in parameter space was analyzed using clustering methods.
+**Description**: Good solutions were averaged and their structure in parameter space was analyzed using clustering methods.
 
 **Scripts**:ExtractWeightsAvg.py
 

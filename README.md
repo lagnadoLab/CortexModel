@@ -46,7 +46,7 @@ The model was designed and tested under the Windows operating system.
 
 ## Installation Guide
 The model was developed using Python 3.11.5 | packaged by Anaconda, Inc. 
-The full virtual environment requirements are in [requirements.txt](./requirements.txt).
+The full virtual environment requirements are in [requirements_lock.txt](./requirements_lock.txt).
 The main dependencies that should be installed/updated are:
 ```
 ipykernel==6.28.0
